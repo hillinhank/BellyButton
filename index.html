@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Basic Charts</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+
 <body>
-    <div id="plotArea"></div>
-    <script src="plots.js"></script>
+
+  <div class="container">
+    <div class="row">
+      <!-- jumbotron image added -->
+      <div class="col-md-12 jumbotron text-center"> style="background-image: url('https://media.istockphoto.com/photos/microscopic-blue-bacteria-background-picture-id628978952?s=612x612');
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <!-- Extra paragraph added -->
+    <div class="row">
+      <div class="col-md-2">
+        <h2 class="text-center">Project Overview</h2>
+        <p>This webpages purpose is to visually diplay the results from Biodiversity data gathered from test participants Belly Buttons. These interactive charts aim to display the results of our study in a palatable manner. Select a study participant via the dropdown menu for 'Test Subject ID No:', then select the appropriate ID.</p>
+        <p>The data is visualized in three sections:</p>
+              <ul1>
+                <li1>'Top 10 Bacteria Cultures Found'</li>
+                <li1>'Belly Button Washing Frequency'</li>
+                <li1>'Bacteria Cultures per Sample'</li>
+              </ul1>     
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="js/charts.js"></script>
+
 </body>
+
 </html>
+
+/Users/user/Desktop/CLSSFOLDER/Belly Buttons/Challenge/charts.js
